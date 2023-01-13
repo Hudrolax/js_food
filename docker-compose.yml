@@ -1,0 +1,9 @@
+version: "1.0"
+
+services:
+  proxy:
+    image: trafex/php-nginx
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8000:8080"
