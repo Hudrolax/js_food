@@ -3,7 +3,17 @@ version: "1.0"
 services:
   proxy:
     image: trafex/php-nginx
+    # restart: always
     volumes:
       - ./dist:/var/www/html
     ports:
       - "8000:8080"
+
+  json-server:
+    image: vimagick/json-server
+    command: -H 0.0.0.0 -p 3000 -w db.json
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/data
+    # restart: always
