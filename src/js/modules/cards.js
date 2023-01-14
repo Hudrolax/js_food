@@ -1,4 +1,4 @@
-const MENU_ROUTE = "http://localhost:3000/menu";
+const MENU_ROUTE = "http://185.189.151.253:3000/menu";
 
 function cards() {
   class MenuItem {
@@ -45,10 +45,8 @@ function cards() {
   };
 
   // getResource(MENU_ROUTE)
-  //   .then(res => res.forEach(item => {
-  //     new MenuItem(item, menuSelector).render();
-  //   }))
-  //   .catch(reason => console.log(reason));
+  //   .then((res) => console.log(res))
+  //   .catch((reason) => console.log(reason));
 
   axios.get(MENU_ROUTE).then((data) =>
     data.data.forEach((item) => {

@@ -1,6 +1,6 @@
 import { closeModalWindow, openModalWindow } from "./modal";
 
-const REQUEST_ROUTE = "http://localhost:3000/requests";
+const REQUEST_ROUTE = "http://185.189.151.253:3000/requests";
 
 function forms() {
   const forms = document.querySelectorAll("form");

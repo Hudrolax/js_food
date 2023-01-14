@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-let path = require('path');
+let path = require("path");
 
 module.exports = {
-  mode: 'production',
-  entry: './src/js/script.js',
+  mode: "production",
+  entry: "./src/js/script.js",
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/dist/js'
+    filename: "bundle.js",
+    path: __dirname + "/dist/js",
   },
   watch: true,
 
@@ -19,16 +19,21 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [['@babel/preset-env', {
-                debug: true,
-                corejs: 3,
-                useBuiltIns: "usage"
-            }]]
-          }
-        }
-      }
-    ]
-  }
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  debug: true,
+                  corejs: 3,
+                  useBuiltIns: "usage",
+                },
+              ],
+            ],
+          },
+        },
+      },
+    ],
+  },
 };
