@@ -75,7 +75,7 @@ function calculator() {
 
   constitutions.forEach((item) => {
     const storageItem = localStorage.getItem(item.id);
-    item.value = storageItem ? storageItem : 0;
+    item.value = storageItem ? storageItem : null;
     calculator.setConstitution(item.id, +item.value);
     item.type = "number";
     item.addEventListener("input", (e) => {
